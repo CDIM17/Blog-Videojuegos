@@ -1,0 +1,27 @@
+USE `siscopmy_online_shop_2`;
+
+CREATE TABLE `_sis_repo_tamanos` (
+  `tamanoId` int(2) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(45) DEFAULT NULL,
+  `orientacion` char(1) DEFAULT NULL,
+  `milimetros_x` decimal(11,2) DEFAULT NULL,
+  `milimetros_y` decimal(11,2) DEFAULT NULL,
+  `impresoraMatriz` char(1) DEFAULT NULL,
+  `parametro` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`tamanoId`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+
+INSERT INTO `_sis_repo_tamanos` (`tamanoId`, `titulo`, `milimetros_x`, `milimetros_y', `parametro`) VALUES
+(1,	'A10',	'',	26.00,	37.00,	'',	'A10'),
+(2,	'4A0',	'',	1682.00,	2378.00,	'',	'4A0'),
+(3,	'2A0',	'',	1189.00,	1682.00,	'',	'2A0'),
+(4,	'A0',	'',	841.00,	1189.00,	'',	'A0'),
+(5,	'A1',	'',	594.00,	841.00,	'',	'A1'),
+(6,	'A2',	'',	420.00,	594.00,	'',	'A2');
+(7,	'A4',	'',	210.00,	420.00,	'',	'A4'),
+(8,	'A3',	'',	297.00,	420.00,	'',	'A3'),
+(9,	'A5',	'',	148.00,	210.00,	'',	'A5'),
+(10,	'A6',	'',	105.00,	148.00,	'',	'A6'),
+(11,	'A7',	'',	74.00,	105.00,	'',	'A7'),
+(12,	'A8',	'',	52.00,	74.00,	'',	'A8'),
+(13,	'A9',	'',	37.00,	52.00,	'',	'A9');
