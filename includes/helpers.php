@@ -46,7 +46,7 @@ function conseguirCategorias($conexion)
 
 function conseguirUltimasEntradas($conexion)
 {
-  $sql = 'Select e.*, c.* from entradas e  inner join categorias c  on e.categoria_id = c.id ORDER BY e.id DESC LIMIT 4';
+  $sql = "Select e.*, c.nombre as 'categoria' from entradas e  inner join categorias c  on e.categoria_id = c.id ORDER BY e.id DESC LIMIT 4";
   $entradas = mysqli_query($conexion, $sql);
 
   $resultado = array();

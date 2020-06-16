@@ -19,56 +19,37 @@ require_once('includes/barra_lateral.php');
 
         <h1>Ultimas Entradas</h1>
 
-        <article class="entrada">
+        <?php
 
-          <a href="#">
-            <h2>Titulo de mi Entrada</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repreh
-           </p>
-         </a>
+          $entradas = conseguirUltimasEntradas($db);
 
-        </article>
+
+
+          if(!empty($entradas)):
+            while ($entrada = mysqli_fetch_assoc($entradas)):
+
+        ?>
 
         <article class="entrada">
 
           <a href="#">
-            <h2>Titulo de mi Entrada</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repreh
-           </p>
-         </a>
-        </article>
-
-        <article class="entrada">
-
-          <a href="#">
-            <h2>Titulo de mi Entrada</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repreh
-           </p>
+            <h2><?= $entrada['titulo']; ?></h2>
+            <span class="fecha"> <?= $entrada['categoria']. ' | '.$entrada['fecha'] ?> </span>
+            <p><?= substr($entrada['descripcion'], 0, 180); ?> ...</p>
          </a>
 
         </article>
 
-        <article class="entrada">
+        <?php
+        endwhile;
 
-          <a href="#">
-            <h2>Titulo de mi Entrada</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repreh
-           </p>
-         </a>
+    endif;
 
-        </article>
+         ?>
+
+
+
+
     <br>
         <div id="ver-todas">
 

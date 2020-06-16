@@ -12,7 +12,7 @@ ini_set('error_reporting', E_ALL);
   <head>
     <meta charset="utf-8">
     <title>Blog de Videojuegos</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/stylee.css">
   </head>
   <body>
 
