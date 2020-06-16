@@ -9,7 +9,7 @@
 
     <h2><?= 'Bienvenido '.$_SESSION['usuario']['nombre']. ' '.$_SESSION['usuario']['apellidos'];?></h2>
 
-      <a href="cerrar.php" class="boton boton-verde">Crear Entradas</a>
+      <a href="crear_entradas.php" class="boton boton-verde">Crear Entradas</a>
       <a href="crear_categorias.php" class="boton boton-azul">Crear Categorías</a>
       <a href="cerrar.php" class="boton boton-naranja">Mis Datos</a>
       <a href="cerrar.php" class="boton boton-rojo">Cerrar Sesion</a>
