@@ -13,6 +13,9 @@ require_once('includes/barra_lateral.php');
 
  ?>
 
+ 
+
+
   <!--Caja Principal-->
 
   <div id = "principal">

@@ -41,13 +41,15 @@
       // code...
       $sql = "INSERT INTO entradas VALUES(NULL, $usuario, $categoria,'$titulo', '$descripcion','$date')";
       $guardar = mysqli_query($db, $sql);
+      header("Location: index.php");
 
     }else {
       // code...
       $_SESSION["errores_entradas"] = $errores;
+      header("Location: crear_entradas.php");
+
     }
 
-    header("Location: index.php");
   }
 
  ?>

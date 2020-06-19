@@ -19,9 +19,14 @@
 
     <label for="titulo">Titulo: </label>
     <input type="text" name="titulo">
+    <?php echo isset($_SESSION['errores_entradas']) ?  mostrarError($_SESSION['errores_entradas'], 'titulo') : ''; ?>
+
 
     <label for="descripcion">Descripcion: </label>
     <textarea name="descripcion"></textarea>
+    <?php echo isset($_SESSION['errores_entradas']) ?  mostrarError($_SESSION['errores_entradas'], 'descripcion') : ''; ?>
+
+
 
     <label for="categoria">Categorias: </label>
     <select name="categoria">
@@ -46,12 +51,16 @@
    endif;    ?>
 
     </select>
+    <?php echo isset($_SESSION['errores_entradas']) ?  mostrarError($_SESSION['errores_entradas'], 'categoria') : ''; ?>
+
 
     <br><br>
 
     <input type="submit" value="Guardar">
 
   </form>
+
+  <?php borrarErrores(); ?>
 
 
 </div>
